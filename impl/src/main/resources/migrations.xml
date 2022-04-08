@@ -5,13 +5,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
-<!--
-    <changeSet id="1" author="yourname">
-        <createTable tableName="exampletable">
-            <column name="somecolumn" type="varchar(40)">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-    </changeSet>
--->
+
+    <include file="migrations_0001_player_auth.xml"/>
+
 </databaseChangeLog>

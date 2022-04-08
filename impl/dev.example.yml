@@ -13,9 +13,11 @@ static-files:
 database:
   user: utvjava
   password: fortnox1
-  url: jdbc:postgresql://192.168.3.41:5432/javaservices_utv&ApplicationName=fikolosseum
+  schema: kyc-fg
+    url: jdbc:postgresql://dev-pg-app003-proxy.fnox.se:6432/javaservices_utv?prepareThreshold=0&ApplicationName=kyc-fg
 
 liquibase-database:
   user: utvjava
   password: fortnox1
-  url: jdbc:postgresql://192.168.3.41:5432/javaservices_utv&ApplicationName=fikolosseum
+  schema: kyc-fg
+    url: jdbc:postgresql://dev-pg-app003-proxy.fnox.se:6432/javaservices_utv?prepareThreshold=0&ApplicationName=kyc-fg
