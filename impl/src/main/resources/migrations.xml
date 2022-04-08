@@ -7,5 +7,6 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
 
     <include file="migrations_0001_player_auth.xml"/>
+    <include file="migrations_0002_room_and_rounds.xml"/>
 
 </databaseChangeLog>
