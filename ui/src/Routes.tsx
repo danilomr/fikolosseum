@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
+import { Lobby } from './views/Lobby/Lobby';
 import { WelcomeScreen } from './Welcome/Welcome';
 
 const Routes = () => (
@@ -9,6 +10,9 @@ const Routes = () => (
 		</Route>
 		<Route path="/welcome">
 			<WelcomeScreen />
+		</Route>
+		<Route path="/lobby">
+			<Lobby />
 		</Route>
 	</Switch>
 );
