@@ -1,11 +1,8 @@
-export const playerLogIn = (playerAuth) => {
+export const setPlayerReadyForNextRound = () => {
 	return async (dispatch) => {
 		try {
-			await fetch('/api/fikolosseum/external/authentication-v1/player-auth', {
+			await fetch('/api/fikolosseum/room-v1/{roomId}/set-player-ready', {
 				method: 'PUT',
-				headers: {
-					playerName: playerAuth.playerName,
-				},
 			}).then((response) => {
 				if (resp.status == 200 || resp.status == 201) {
 				}
@@ -14,11 +11,11 @@ export const playerLogIn = (playerAuth) => {
 	};
 };
 
-export const playerLogOut = () => {
+export const getRoomStatus = () => {
 	return async (dispatch) => {
 		try {
-			await fetch('/api/fikolosseum/room-v1//{roomId}/log-out', {
-				method: 'PUT',
+			await fetch('/api/fikolosseum/room-v1/{roomId}/room-status', {
+				method: 'GET',
 			}).then((response) => {
 				if (resp.status == 200 || resp.status == 201) {
 				}
