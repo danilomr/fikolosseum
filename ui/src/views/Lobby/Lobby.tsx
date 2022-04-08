@@ -1,18 +1,17 @@
 import React from 'react';
-import { H1, H4, Row, Column, TextField, Button, Validate } from '@fnox/fabstracta';
+import { H1, Row, Column, TextField, PrimaryButton, Validate } from '@fnox/fabstracta';
 import { validateRequiredField } from '@fnox/fabstracta-platform';
+import { playerLogIn } from 'actions/authentication';
 import { useDispatch } from 'hooks/useDispatch';
 import { useTypedSelector } from 'hooks/useTypedSelector';
-import { playerLogIn } from 'actions/authentication';
 
 export const Lobby: React.FC = () => {
-
 	const dispatch = useDispatch();
 
 	const playerAuth = useTypedSelector((state) => state.entities.playerAuth);
-    const joinRoom = () => {
-    	dispatch(playerLogIn(playerAuth));
-    }
+	const joinRoom = () => {
+		dispatch(playerLogIn(playerAuth));
+	};
 
 	return (
 		<>
@@ -31,11 +30,10 @@ export const Lobby: React.FC = () => {
 			<Row>
 				<Column>
 					<Validate entities="playerAuth" onClick={joinRoom}>
-						<Button testID="join-room" >Join room</Button>
+						<PrimaryButton testID="join-room">Join room</PrimaryButton>
 					</Validate>
 				</Column>
 			</Row>
 		</>
 	);
-
 };

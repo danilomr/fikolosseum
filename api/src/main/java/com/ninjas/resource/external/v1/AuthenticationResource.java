@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 /**
  * Resource for creating player authentication.
  */
-@Path("/api/fikagame/external/authentication-v1")
+@Path("/api/fikolosseum/external/authentication-v1")
 public interface AuthenticationResource {
 
     /**
