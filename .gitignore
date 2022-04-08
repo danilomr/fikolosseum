@@ -1,0 +1,9 @@
+api/target/*
+impl/target/*
+impl/dependency-reduced-pom.xml
+spec/target/*
+ui/.nvmrc
+.idea/*
+*.iml
+.DS_Store
+/impl/src/main/resources/rebel.xml
