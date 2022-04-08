@@ -1,0 +1,7 @@
+.git
+.nyc_output
+build
+coverage
+dist
+i18n
+node_modules

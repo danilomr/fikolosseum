@@ -1,0 +1,5 @@
+{
+	"recursive": true,
+	"require": ["ts-node/register/transpile-only", "ignore-styles"],
+	"file": "./test/env.helper.js"
+}

@@ -1,0 +1,15 @@
+@import '~@fnox/fabstracta/src/style/fonts';
+@import '~@fnox/fabstracta/dist/fabstracta.css';
+@import '~@fnox/fabstracta/src/style/styles';
+
+.App {
+	padding: 20px;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	max-width: 100%;
+}
+
+.App .ico {
+	font-size: 42px;
+}

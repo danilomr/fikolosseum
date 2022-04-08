@@ -1,0 +1,28 @@
+httpClient: {{ROUTE_HOST}}
+
+admin:
+  port: 8081
+
+eventPublisher:
+  kafkaBrokerList: {{KAFKA_BROKER_LIST}}
+  enabled: true
+
+kafkaClient:
+  enabled: {{KAFKA_ENABLED}}
+  bootstrapServers: {{KAFKA_BROKER_LIST}}
+  groupId: fikolosseum
+
+database:
+  user: {{DB_USER}}
+  password: {{DB_PASSWORD}}
+  schema: {{DB_SCHEMA}}
+  url: jdbc:postgresql://{{DB_HOST}}:{{DB_PORT}}/{{DB_NAME}}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&prepareThreshold=0&ApplicationName={{HOSTNAME}}
+
+liquibase-database:
+  user: {{DB_USER}}
+  password: {{DB_PASSWORD}}
+  schema: {{DB_SCHEMA}}
+  url: jdbc:postgresql://{{DB_HOST}}:{{DB_PORT}}/{{DB_NAME}}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&prepareThreshold=0&ApplicationName={{HOSTNAME}}-liquibase
+
+transactionEventPublisher:
+  enabled: true

@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: node_modules/fabstracta-platform/src/validation/organizationnumber.ts:60
+#, javascript-format
+msgid "${ value } är inte ett giltigt org-/personnummer"
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/actions/validateTextField.ts:30
+msgid "Fältet får endast innehålla siffror"
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/actions/validateTextField.ts:35
+msgid "Fältet är obligatoriskt"
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/middleware/errorReporter.ts:11
+msgid "Hoppsan, något gick fel!"
+msgstr ""
+
+#: node_modules/fabstracta/src/form/Autocomplete/Autocomplete.tsx:39
+msgid "Inga resultat..."
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/actions/validateTextField.ts:28
+msgid "Ogiltig e-postadress"
+msgstr ""
+
+#: node_modules/fabstracta/src/form/Calendar/calendarValidators.ts:15
+#: node_modules/fabstracta/src/form/Calendar/calendarValidators.ts:24
+msgid "Ogiltigt datum"
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/actions/validateTextField.ts:34
+msgid "Ogiltigt telefonnummer"
+msgstr ""
+
+#: node_modules/fabstracta-platform/src/validation/organizationnumber.ts:59
+msgid "Org-/personnumret innehåller andra tecken än 0-9 och -"
+msgstr ""
+
+#: node_modules/fabstracta/src/form/TagSelect/TagSelectList.tsx:46
+#, javascript-format
+msgid "och ${ quantity } till"
+msgstr ""

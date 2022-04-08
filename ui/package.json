@@ -1,0 +1,88 @@
+{
+	"name": "@fnox/fabstracta-template",
+	"frontendEndpoint": "fabstracta-template",
+	"IS_VESSEL_APP": false,
+	"version": "1.4.0",
+	"license": "UNLICENSED",
+	"description": "Starter template project for developing products using Fabstracta",
+	"module": "dist/fabstracta-template.cjs.js",
+	"main": "dist/fabstracta-template.cjs.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"predev": "sh ./node_modules/@fnox/fabstracta-platform/cvecheck.sh",
+		"prod": "webpack",
+		"build": "cross-env RENDER_APP=false webpack",
+		"dev": "cross-env PROXY_API=0 webpack serve --progress --https --port 9090",
+		"dev-jbehave": "cross-env PROXY_ALL=http://localhost:7099 webpack serve --port 9091",
+		"extract-translations": "ttag update i18n/sv.po ./src && ttag update i18n/en.po ./src",
+		"translations-to-json": "ttag po2json i18n/sv.po --format=compact > i18n/sv.po.json && ttag po2json i18n/en.po --format=compact > i18n/en.po.json",
+		"translate": "npm run extract-translations && npm run translations-to-json",
+		"e2e": "start-server-and-test e2e:coverage:webpack http-get://localhost:9093 e2e:open",
+		"e2e:run": "cross-env NODE_ENV=test CYPRESS_coverage=false cypress run",
+		"e2e:open": "cross-env NODE_ENV=test CYPRESS_coverage=false cypress open",
+		"e2e:coverage": "start-server-and-test e2e:coverage:webpack http-get://localhost:9093 e2e:coverage:cypress",
+		"e2e:coverage:cypress": "rimraf coverage .nyc_output && cross-env NODE_ENV=test CYPRESS_coverage=true cypress run && npm run e2e:coverage:report",
+		"e2e:coverage:webpack": "cross-env PROXY_DISABLED=0 CYPRESS_coverage=true webpack serve --port 9093",
+		"e2e:coverage:report": "nyc report --check-coverage=false --reporter=text --reporter=text-summary",
+		"test": "TS_NODE_IGNORE=false mocha ./src/**/*.test.{ts,tsx} ./src/**/**/*.test.{ts,tsx}",
+		"test-file": "TS_NODE_IGNORE=false mocha",
+		"test-inspect": "TS_NODE_IGNORE=false mocha --inspect",
+		"test-inspect-brk": "TS_NODE_IGNORE=false mocha --inspect-brk",
+		"lint:all": "eslint --max-warnings=0 '.'",
+		"lint": "npx eslint --max-warnings=0 $(git diff origin/master.. --name-only --diff-filter=ACM -- '*.ts' '*.tsx')",
+		"format:all": "prettier --write ."
+	},
+	"dependencies": {
+		"@fnox/fabstracta": "15.1.1",
+		"@fnox/fabstracta-funky": "2.9.2",
+		"@fnox/fabstracta-platform": "3.17.3"
+	},
+	"devDependencies": {
+		"@axe-core/react": "4.3.1",
+		"@cypress/code-coverage": "3.9.11",
+		"@types/accounting": "0.4.2",
+		"@types/chroma-js": "2.1.3",
+		"@types/classnames": "2.3.1",
+		"@types/react": "17.0.29",
+		"@types/react-dom": "17.0.9",
+		"@types/react-redux": "7.1.19",
+		"@types/react-router": "5.1.17",
+		"@types/react-router-dom": "^5.3.1",
+		"@types/shortid": "0.0.29",
+		"babel-plugin-istanbul": "6.0.0",
+		"cross-env": "7.0.3",
+		"cypress": "8.6.0",
+		"lint-staged": "11.2.3",
+		"start-server-and-test": "1.14.0"
+	},
+	"publishConfig": {
+		"registry": "https://nexus.fnox.se/nexus/content/repositories/npm-fnox/"
+	},
+	"browserslist": {
+		"production": [
+			"defaults",
+			"not IE 11"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged --no-stash"
+		}
+	},
+	"lint-staged": {
+		"*.(ts|tsx)": [
+			"prettier --write",
+			"eslint --fix --max-warnings=0"
+		]
+	},
+	"cypress-cucumber-preprocessor": {
+		"step_definitions": "cypress/support/step_definitions/"
+	}
+}

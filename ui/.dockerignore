@@ -1,0 +1,4 @@
+.git/
+.nyc_output/
+cypress/
+node_modules/

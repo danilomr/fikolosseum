@@ -1,0 +1,9 @@
+{
+	"supportFile": "cypress/support/index.ts",
+	"baseUrl": "http://localhost:9093/",
+	"ignoreTestFiles": "!*.feature",
+	"nodeVersion": "system",
+	"chromeWebSecurity": false,
+	"viewportWidth": 1280,
+	"viewportHeight": 1024
+}

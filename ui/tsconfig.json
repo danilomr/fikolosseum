@@ -1,0 +1,28 @@
+{
+	"include": ["src/**/*", "index.d.ts"],
+	"compilerOptions": {
+		"target": "es6",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"jsx": "react",
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"baseUrl": "src"
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+httpClient: route-utv.fnox.se
+
+proxy-pass:
+  /f2->https://apps-develop.alfa.fortnox.local/f2
+  /fs->https://apps-develop.alfa.fortnox.local/fs
+  /webapp->https://apps-develop.alfa.fortnox.local/webapp
+  /api->https://apps-develop.alfa.fortnox.local/api
+
+static-files:
+  path: ../ui
+  indexFile: index.html
+
+database:
+  user: utvjava
+  password: fortnox1
+  url: jdbc:postgresql://192.168.3.41:5432/javaservices_utv&ApplicationName=fikolosseum
+
+liquibase-database:
+  user: utvjava
+  password: fortnox1
+  url: jdbc:postgresql://192.168.3.41:5432/javaservices_utv&ApplicationName=fikolosseum
