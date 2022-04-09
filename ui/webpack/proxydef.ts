@@ -1,7 +1,7 @@
 import webpackDevServer from 'webpack-dev-server';
 import { frontendEndpoint, IS_VESSEL_APP } from '../package.json';
 
-const target = process.env.PROXY_TARGET || 'https://apps-develop.alfa.fnox.se';
+const target = process.env.PROXY_TARGET || 'http://localhost:8080';
 
 const defaultProxyOptions: webpackDevServer.ProxyConfigArrayItem = {
 	target,
