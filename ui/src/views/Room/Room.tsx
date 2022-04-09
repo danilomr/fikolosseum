@@ -77,7 +77,7 @@ export const Room: React.FC = () => {
 			<Row>
 				<Column>
 					<Card>
-						<PrimaryButton testID="set-ready-for-round" onClick={setReady}>
+						<PrimaryButton testID="set-ready-for-round" onClick={setReady()}>
 							I am ready!
 						</PrimaryButton>
 					</Card>

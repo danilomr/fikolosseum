@@ -3,6 +3,7 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import { WelcomeScreen } from './Welcome/Welcome';
 import { Lobby } from './views/Lobby/Lobby';
 import { Room } from './views/Room/Room';
+import { RoundResults } from './views/RoundResults/RoundResults';
 
 const Routes = () => (
 	<Switch>
@@ -17,6 +18,9 @@ const Routes = () => (
 		</Route>
 		<Route path="/room">
 			<Room />
+		</Route>
+		<Route path="/round-results">
+			<RoundResults />
 		</Route>
 	</Switch>
 );
