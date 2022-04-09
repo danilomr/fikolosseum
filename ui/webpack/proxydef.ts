@@ -34,6 +34,11 @@ const proxydef: webpackDevServer.Configuration['proxy'] = [
 		context: ['/api/**', '/f2/**'],
 		...defaultProxyOptions,
 	},
+	{
+		context: ['/api/fikolosseum/', '/internalapi/fikolosseum/'],
+		...defaultProxyOptions,
+		target: 'http://localhost:8080',
+	},
 ];
 
 // Proxy definitions needed for apps running inside Vessel/F3
